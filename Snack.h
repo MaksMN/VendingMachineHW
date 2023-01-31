@@ -13,7 +13,7 @@ namespace Snacks {
 	class Snack
 	{
 	public:
-		std::string	Name = ""; // название
+		std::string	Name = ""; // РЅР°Р·РІР°РЅРёРµ
 		Statuses statuses = Statuses::null;
 
 		Snack(std::string name, unsigned price, unsigned calories);
@@ -27,7 +27,7 @@ namespace Snacks {
 		void setCalories(unsigned calories);
 
 	private:
-		unsigned Price = 0; // Цена
-		unsigned Calories = 0; // Калорийность
+		unsigned Price = 0; // Р¦РµРЅР°
+		unsigned Calories = 0; // РљР°Р»РѕСЂРёР№РЅРѕСЃС‚СЊ
 	};
 }

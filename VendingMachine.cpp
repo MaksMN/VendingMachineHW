@@ -14,7 +14,7 @@ VendingMachine::VendingMachine(unsigned const slotsCount, unsigned const slotSna
 		Slots[i] = new SnackSlots::SnackSlot(slotSnacksCount);
 		Slots[i]->SlotIndex = i;
 	}
-	Misc::SendDebugMsg("Конструктор VendingMachine с готовыми слотами");
+	Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ VendingMachine СЃ РіРѕС‚РѕРІС‹РјРё СЃР»РѕС‚Р°РјРё");
 }
 
 VendingMachine::VendingMachine(unsigned slotsCount)
@@ -24,7 +24,7 @@ VendingMachine::VendingMachine(unsigned slotsCount)
 	for (unsigned i = 0; i < SlotsCount; i++) {
 		Slots[i] = nullptr;
 	}
-	Misc::SendDebugMsg("Конструктор VendingMachine без слотов");
+	Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ VendingMachine Р±РµР· СЃР»РѕС‚РѕРІ");
 }
 
 VendingMachine::~VendingMachine()
@@ -43,7 +43,7 @@ unsigned VendingMachine::getSlotsCount()
 
 void VendingMachine::getEmptySlotsCount()
 {
-	std::cout << "Количество пустых слотов: ";
+	std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РїСѓСЃС‚С‹С… СЃР»РѕС‚РѕРІ: ";
 	int count = 0;
 	for (unsigned i = 0; i < SlotsCount; i++) {
 		if ((Slots[i] != nullptr) && (Slots[i]->statuses & SnackSlots::empty)) count++;
@@ -53,7 +53,7 @@ void VendingMachine::getEmptySlotsCount()
 
 void VendingMachine::getEmptySlotsCells()
 {
-	std::cout << "Количество пустых ячеек для слотов: ";
+	std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РїСѓСЃС‚С‹С… СЏС‡РµРµРє РґР»СЏ СЃР»РѕС‚РѕРІ: ";
 	int count = 0;
 	for (unsigned i = 0; i < SlotsCount; i++) {
 		if (Slots[i] == nullptr) count++;
@@ -75,15 +75,15 @@ void VendingMachine::addSlot(SnackSlots::SnackSlot slot)
 Snacks::Snack* VendingMachine::Sale(unsigned machineSlot, unsigned snackIndex, unsigned* customerWallet, std::string* failMessage)
 {
 	if (machineSlot > SlotsCount - 1 || snackIndex > Slots[machineSlot]->getSnacksMaxCount() - 1) {
-		*failMessage = "Вы выбрали ячейку за пределом допустимых диапазонов.";
+		*failMessage = "Р’С‹ РІС‹Р±СЂР°Р»Рё СЏС‡РµР№РєСѓ Р·Р° РїСЂРµРґРµР»РѕРј РґРѕРїСѓСЃС‚РёРјС‹С… РґРёР°РїР°Р·РѕРЅРѕРІ.";
 		return nullptr;
 	}
 	if (Slots[machineSlot]->Snacks[snackIndex] == nullptr) {
-		*failMessage = "Вы выбрали ячейку с отсутствующим снеком.";
+		*failMessage = "Р’С‹ РІС‹Р±СЂР°Р»Рё СЏС‡РµР№РєСѓ СЃ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РёРј СЃРЅРµРєРѕРј.";
 		return nullptr;
 	}
 	if (Slots[machineSlot]->statuses & SnackSlots::empty) {
-		*failMessage = "\nСлот пустой.";
+		*failMessage = "\nРЎР»РѕС‚ РїСѓСЃС‚РѕР№.";
 		return nullptr;
 	}
 
@@ -94,7 +94,7 @@ Snacks::Snack* VendingMachine::Sale(unsigned machineSlot, unsigned snackIndex, u
 		std::stringstream ss;
 		ss << ~(newBalance - 1);
 		ss >> newBalance_s;
-		*failMessage = "Вам не хватает " + newBalance_s + " монет.";
+		*failMessage = "Р’Р°Рј РЅРµ С…РІР°С‚Р°РµС‚ " + newBalance_s + " РјРѕРЅРµС‚.";
 		return nullptr;
 	}
 	Snacks::Snack* customerSnack = SnackSlots::SnackSlot::NewSnack(*Slots[machineSlot]->Snacks[snackIndex]);

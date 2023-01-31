@@ -8,14 +8,14 @@ namespace SnackSlots {
 		for (unsigned i = 0; i < SnacksMaxCount; i++) {
 			Snacks[i] = nullptr;
 		}
-		Misc::SendDebugMsg("Конструктор SnackSlot(unsigned snacksMaxCount)");
+		Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ SnackSlot(unsigned snacksMaxCount)");
 	}
 
 	SnackSlot::SnackSlot()
 	{
 		SnacksMaxCount = 1;
 		Snacks = new Snacks::Snack * [1];
-		Misc::SendDebugMsg("Конструктор SnackSlot()");
+		Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ SnackSlot()");
 	}
 
 	SnackSlot::SnackSlot(SnackSlot& oldSlot, unsigned snacksMaxCount)
@@ -32,7 +32,7 @@ namespace SnackSlots {
 		}
 		this->statuses = oldSlot.statuses;
 		this->SnacksQuantity = oldSlot.SnacksQuantity;
-		Misc::SendDebugMsg("Конструктор SnackSlot(SnackSlot& oldSlot, unsigned snacksMaxCount)");
+		Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ SnackSlot(SnackSlot& oldSlot, unsigned snacksMaxCount)");
 	}
 
 	SnackSlot::~SnackSlot()
@@ -46,11 +46,11 @@ namespace SnackSlots {
 	void SnackSlot::AddSnacks(unsigned quantity, Snacks::Snack snack)
 	{
 		if (Statuses::full & statuses) {
-			Misc::SendMessage("Слот полностью заполнен. Удалите или продайте снеки чтобы добавлять новые.");
+			Misc::SendMessage("РЎР»РѕС‚ РїРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°РїРѕР»РЅРµРЅ. РЈРґР°Р»РёС‚Рµ РёР»Рё РїСЂРѕРґР°Р№С‚Рµ СЃРЅРµРєРё С‡С‚РѕР±С‹ РґРѕР±Р°РІР»СЏС‚СЊ РЅРѕРІС‹Рµ.");
 			return;
 		}
 		if (quantity + SnacksQuantity >= SnacksMaxCount) {
-			Misc::SendMessage("Превышение вместимости. Слот будет заполнен до конца.");
+			Misc::SendMessage("РџСЂРµРІС‹С€РµРЅРёРµ РІРјРµСЃС‚РёРјРѕСЃС‚Рё. РЎР»РѕС‚ Р±СѓРґРµС‚ Р·Р°РїРѕР»РЅРµРЅ РґРѕ РєРѕРЅС†Р°.");
 		}
 		unsigned q = 0;
 		for (unsigned i = 0; i < SnacksMaxCount; i++) {
@@ -124,21 +124,21 @@ namespace SnackSlots {
 	void SnackSlot::SlotInfo(bool showSnacks)
 	{
 		std::cout <<
-			"\nСлот №" << SlotIndex <<
-			"\nКоличество снеков: " << SnacksQuantity <<
-			"\nВместимость: " << SnacksMaxCount <<
-			"\nМожно добавить " << getFreeSeats() << " снеков" << std::endl;
+			"\nРЎР»РѕС‚ в„–" << SlotIndex <<
+			"\nРљРѕР»РёС‡РµСЃС‚РІРѕ СЃРЅРµРєРѕРІ: " << SnacksQuantity <<
+			"\nР’РјРµСЃС‚РёРјРѕСЃС‚СЊ: " << SnacksMaxCount <<
+			"\nРњРѕР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ " << getFreeSeats() << " СЃРЅРµРєРѕРІ" << std::endl;
 
-		//Вывести список снеков в слоте
+		//Р’С‹РІРµСЃС‚Рё СЃРїРёСЃРѕРє СЃРЅРµРєРѕРІ РІ СЃР»РѕС‚Рµ
 		if (showSnacks && !(statuses & Statuses::empty)) {
-			Misc::SendMessage("Полный список снеков");
+			Misc::SendMessage("РџРѕР»РЅС‹Р№ СЃРїРёСЃРѕРє СЃРЅРµРєРѕРІ");
 
 			for (unsigned i = 0; i < SnacksMaxCount; i++) {
 				if (Snacks[i] != nullptr) {
 					std::cout << "[" << i << "] " <<
 						Snacks[i]->Name <<
-						" Цена: " << Snacks[i]->getPrice() <<
-						" Калорийность: " << Snacks[i]->getCalories() <<
+						" Р¦РµРЅР°: " << Snacks[i]->getPrice() <<
+						" РљР°Р»РѕСЂРёР№РЅРѕСЃС‚СЊ: " << Snacks[i]->getCalories() <<
 						std::endl;
 				}
 			}

@@ -29,46 +29,46 @@ namespace SnackSlots {
 		~SnackSlot();
 
 		/// <summary>
-		/// Заполняет слот указанным количеством снеков.
-		/// Ищет первые свободные ячейки.
+		/// Р—Р°РїРѕР»РЅСЏРµС‚ СЃР»РѕС‚ СѓРєР°Р·Р°РЅРЅС‹Рј РєРѕР»РёС‡РµСЃС‚РІРѕРј СЃРЅРµРєРѕРІ.
+		/// РС‰РµС‚ РїРµСЂРІС‹Рµ СЃРІРѕР±РѕРґРЅС‹Рµ СЏС‡РµР№РєРё.
 		/// </summary>
-		/// <param name="quantity">Количество добавляемых снеков. Если превышает вместимость, слот будет заполнен до конца</param>
-		/// <param name="snack">Объект Snack</param>
+		/// <param name="quantity">РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»СЏРµРјС‹С… СЃРЅРµРєРѕРІ. Р•СЃР»Рё РїСЂРµРІС‹С€Р°РµС‚ РІРјРµСЃС‚РёРјРѕСЃС‚СЊ, СЃР»РѕС‚ Р±СѓРґРµС‚ Р·Р°РїРѕР»РЅРµРЅ РґРѕ РєРѕРЅС†Р°</param>
+		/// <param name="snack">РћР±СЉРµРєС‚ Snack</param>
 		void AddSnacks(unsigned quantity, Snacks::Snack snack);
 
 		/// <summary>
-		/// Заполняет все свободные ячейки слота
+		/// Р—Р°РїРѕР»РЅСЏРµС‚ РІСЃРµ СЃРІРѕР±РѕРґРЅС‹Рµ СЏС‡РµР№РєРё СЃР»РѕС‚Р°
 		/// </summary>
-		/// <param name="snack">Объект Snack</param>
+		/// <param name="snack">РћР±СЉРµРєС‚ Snack</param>
 		void AddSnacks(Snacks::Snack snack);
 
 		/// <summary>
-		/// Добавляет снек в первую свободную ячейку
+		/// Р”РѕР±Р°РІР»СЏРµС‚ СЃРЅРµРє РІ РїРµСЂРІСѓСЋ СЃРІРѕР±РѕРґРЅСѓСЋ СЏС‡РµР№РєСѓ
 		/// </summary>
-		/// <param name="snack">Объект Snack</param>
+		/// <param name="snack">РћР±СЉРµРєС‚ Snack</param>
 		void AddSnack(Snacks::Snack snack);
 
 		/// <summary>
-		/// Удаляет снек в ячейке с указанным индексом
+		/// РЈРґР°Р»СЏРµС‚ СЃРЅРµРє РІ СЏС‡РµР№РєРµ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРЅРґРµРєСЃРѕРј
 		/// </summary>
-		/// <param name="index">Индекс снека в слоте</param>
+		/// <param name="index">РРЅРґРµРєСЃ СЃРЅРµРєР° РІ СЃР»РѕС‚Рµ</param>
 		void DeleteSnacks(unsigned index);
 
-		// Удаляет все ячейки в слоте
+		// РЈРґР°Р»СЏРµС‚ РІСЃРµ СЏС‡РµР№РєРё РІ СЃР»РѕС‚Рµ
 		void DeleteSnacks();
 
 		/// <summary>
-		/// Вставляет слот в автомат
+		/// Р’СЃС‚Р°РІР»СЏРµС‚ СЃР»РѕС‚ РІ Р°РІС‚РѕРјР°С‚
 		/// </summary>
 		void InsertSlot();
 
 		/// <summary>
-		/// Извлекает слот из автомата
+		/// РР·РІР»РµРєР°РµС‚ СЃР»РѕС‚ РёР· Р°РІС‚РѕРјР°С‚Р°
 		/// </summary>
 		void EjectSlot();
 
 		/// <summary>
-		/// Количество снеков в слоте
+		/// РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРЅРµРєРѕРІ РІ СЃР»РѕС‚Рµ
 		/// </summary>
 		/// <returns>unsigned</returns>
 		unsigned getSnacksQuantity();
@@ -76,19 +76,19 @@ namespace SnackSlots {
 		unsigned getSnacksMaxCount();
 
 		/// <summary>
-		/// Информация о слоте
+		/// РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃР»РѕС‚Рµ
 		/// </summary>
-		/// <param name="showSnacks">Показать список снеков</param>
+		/// <param name="showSnacks">РџРѕРєР°Р·Р°С‚СЊ СЃРїРёСЃРѕРє СЃРЅРµРєРѕРІ</param>
 		void SlotInfo(bool showSnacks = true);
 
 		/// <summary>
-		/// Количество свободных ячеек
+		/// РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРІРѕР±РѕРґРЅС‹С… СЏС‡РµРµРє
 		/// </summary>
 		/// <returns>unsigned</returns>
 		unsigned getFreeSeats();
 
 		/// <summary>
-		/// Создает динамический объект Snack
+		/// РЎРѕР·РґР°РµС‚ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚ Snack
 		/// </summary>
 		/// <param name="snack">Snacks::Snack</param>
 		/// <returns>Snacks::Snack</returns>

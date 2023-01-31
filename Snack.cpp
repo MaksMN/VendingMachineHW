@@ -9,12 +9,12 @@ namespace Snacks {
 		setPrice(price);
 		setCalories(calories);
 		Name = name;
-		Misc::SendDebugMsg("Конструктор Snack");
+		Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Snack");
 	}
 
 	Snack::Snack()
 	{
-		Misc::SendDebugMsg("Конструктор по умолчанию Snack");
+		Misc::SendDebugMsg("РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Snack");
 	}
 
 	Snack::~Snack()
@@ -29,7 +29,7 @@ namespace Snacks {
 
 	void Snack::setPrice(unsigned price)
 	{
-		Price = Misc::GetUnsignedNonZeroNum(price, "Цена снека должна быть положительным числом больше нуля.\nВведите число : ");
+		Price = Misc::GetUnsignedNonZeroNum(price, "Р¦РµРЅР° СЃРЅРµРєР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј Р±РѕР»СЊС€Рµ РЅСѓР»СЏ.\nР’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ : ");
 	}
 
 	unsigned Snack::getCalories()
@@ -39,6 +39,6 @@ namespace Snacks {
 
 	void Snack::setCalories(unsigned calories)
 	{
-		Calories = Misc::GetUnsignedNonZeroNum(calories, "Калорийность продукта должна быть положительным числом больше нуля.\nВведите число : ");
+		Calories = Misc::GetUnsignedNonZeroNum(calories, "РљР°Р»РѕСЂРёР№РЅРѕСЃС‚СЊ РїСЂРѕРґСѓРєС‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј Р±РѕР»СЊС€Рµ РЅСѓР»СЏ.\nР’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ : ");
 	}
 }

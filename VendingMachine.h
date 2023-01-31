@@ -7,21 +7,21 @@
 
 class VendingMachine
 {
-	unsigned SlotsCount; // Количество слотов	
+	unsigned SlotsCount; // РљРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ	
 public:
 
 	SnackSlots::SnackSlot** Slots;
 
 	/// <summary>
-	/// Создает машину со вставленными слотами.
+	/// РЎРѕР·РґР°РµС‚ РјР°С€РёРЅСѓ СЃРѕ РІСЃС‚Р°РІР»РµРЅРЅС‹РјРё СЃР»РѕС‚Р°РјРё.
 	/// </summary>
-	/// <param name="slotsCount">Количество слотов</param>
-	/// <param name="slotSnacksCount">Количество ячеек в слоте</param>
+	/// <param name="slotsCount">РљРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ</param>
+	/// <param name="slotSnacksCount">РљРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє РІ СЃР»РѕС‚Рµ</param>
 	VendingMachine(unsigned const slotsCount, unsigned const slotSnacksCount);
 
 	/// <summary>
-	/// Создает машину только с ячейками под слоты.
-	/// Сами слоты надо создавать отдельно и добавлять в машину
+	/// РЎРѕР·РґР°РµС‚ РјР°С€РёРЅСѓ С‚РѕР»СЊРєРѕ СЃ СЏС‡РµР№РєР°РјРё РїРѕРґ СЃР»РѕС‚С‹.
+	/// РЎР°РјРё СЃР»РѕС‚С‹ РЅР°РґРѕ СЃРѕР·РґР°РІР°С‚СЊ РѕС‚РґРµР»СЊРЅРѕ Рё РґРѕР±Р°РІР»СЏС‚СЊ РІ РјР°С€РёРЅСѓ
 	/// </summary>
 	/// <param name="slotsCount"></param>
 	VendingMachine(unsigned const slotsCount);
@@ -31,28 +31,28 @@ public:
 	unsigned getSlotsCount();
 
 	/// <summary>
-	/// Получает количество пустых слотов
+	/// РџРѕР»СѓС‡Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСѓСЃС‚С‹С… СЃР»РѕС‚РѕРІ
 	/// </summary>
 	void getEmptySlotsCount();
 
 	/// <summary>
-	/// Получает количество ячеек без слотов
+	/// РџРѕР»СѓС‡Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє Р±РµР· СЃР»РѕС‚РѕРІ
 	/// </summary>
 	void getEmptySlotsCells();
 
 	/// <summary>
-	/// Добавляет слот в машину
+	/// Р”РѕР±Р°РІР»СЏРµС‚ СЃР»РѕС‚ РІ РјР°С€РёРЅСѓ
 	/// </summary>
 	/// <param name="">SnackSlots::SnackSlot</param>
 	void addSlot(SnackSlots::SnackSlot slot);
 
 	/// <summary>
-	/// Продает снек
+	/// РџСЂРѕРґР°РµС‚ СЃРЅРµРє
 	/// </summary>
-	/// <param name="machineSlot">Номер слота в машине</param>
-	/// <param name="snackIndex">Индекс снека в слоте</param>
-	/// <param name="customerWallet">Указатель на переменную кошелька покупателя</param>
-	/// <param name="failMessage">Указатель на переменную в которую выводится сообщение о сбоях покупки</param>
+	/// <param name="machineSlot">РќРѕРјРµСЂ СЃР»РѕС‚Р° РІ РјР°С€РёРЅРµ</param>
+	/// <param name="snackIndex">РРЅРґРµРєСЃ СЃРЅРµРєР° РІ СЃР»РѕС‚Рµ</param>
+	/// <param name="customerWallet">РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РїРµСЂРµРјРµРЅРЅСѓСЋ РєРѕС€РµР»СЊРєР° РїРѕРєСѓРїР°С‚РµР»СЏ</param>
+	/// <param name="failMessage">РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РїРµСЂРµРјРµРЅРЅСѓСЋ РІ РєРѕС‚РѕСЂСѓСЋ РІС‹РІРѕРґРёС‚СЃСЏ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃР±РѕСЏС… РїРѕРєСѓРїРєРё</param>
 	/// <returns></returns>
 	Snacks::Snack* Sale(unsigned machineSlot, unsigned snackIndex, unsigned* customerWallet, std::string* failMessage);
 };

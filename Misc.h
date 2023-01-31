@@ -5,50 +5,50 @@ class Misc
 {
 public:
 	/// <summary>
-	/// Запрашивает положительное число больше ноля
+	/// В«Р°РїСЂР°С€РёРІР°РµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ РЅРѕР»В¤
 	/// </summary>
-	/// <param name="message">Текст запроса</param>
-	/// <param name="warning">Текст предупреждения если число не соответствует условиям</param>
+	/// <param name="message">вЂњРµРєСЃС‚ Р·Р°РїСЂРѕСЃР°</param>
+	/// <param name="warning">вЂњРµРєСЃС‚ РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёВ¤ РµСЃР»Рё С‡РёСЃР»Рѕ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СѓСЃР»РѕРІРёВ¤Рј</param>
 	/// <returns>unsigned</returns>
 	static unsigned GetUnsignedNonZeroNum(std::string message, std::string warning);
 
 	/// <summary>
-	/// Запрашивает положительное число больше ноля из диапазона чисел
+	/// В«Р°РїСЂР°С€РёРІР°РµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ РЅРѕР»В¤ РёР· РґРёР°РїР°Р·РѕРЅР° С‡РёСЃРµР»
 	/// </summary>
-	/// <param name="start">Начальное число диапазона</param>
-	/// <param name="end">Конечное число диапазона</param>
-	/// <param name="message">Текст запроса</param>
-	/// <param name="warning">Текст предупреждения если число не соответствует условиям</param>
+	/// <param name="start">РЊР°С‡Р°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РґРёР°РїР°Р·РѕРЅР°</param>
+	/// <param name="end">В РѕРЅРµС‡РЅРѕРµ С‡РёСЃР»Рѕ РґРёР°РїР°Р·РѕРЅР°</param>
+	/// <param name="message">вЂњРµРєСЃС‚ Р·Р°РїСЂРѕСЃР°</param>
+	/// <param name="warning">вЂњРµРєСЃС‚ РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёВ¤ РµСЃР»Рё С‡РёСЃР»Рѕ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СѓСЃР»РѕРІРёВ¤Рј</param>
 	/// <returns>unsigned</returns>
 	static unsigned GetUnsignedNonZeroNum(unsigned start, unsigned end, std::string message, std::string warning);
 
 	/// <summary>
-	/// Проверяет положительное число больше ноля
+	/// С•СЂРѕРІРµСЂВ¤РµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ РЅРѕР»В¤
 	/// </summary>
-	/// <param name="message">Текст запроса</param>
-	/// <param name="warning">Текст предупреждения если число не соответствует условиям</param>
+	/// <param name="message">вЂњРµРєСЃС‚ Р·Р°РїСЂРѕСЃР°</param>
+	/// <param name="warning">вЂњРµРєСЃС‚ РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёВ¤ РµСЃР»Рё С‡РёСЃР»Рѕ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СѓСЃР»РѕРІРёВ¤Рј</param>
 	/// <returns>unsigned</returns>
 	static unsigned GetUnsignedNonZeroNum(unsigned num, std::string warning);
 
 	/// <summary>
-	/// Проверяет положительное число больше ноля из диапазона чисел
+	/// С•СЂРѕРІРµСЂВ¤РµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ РЅРѕР»В¤ РёР· РґРёР°РїР°Р·РѕРЅР° С‡РёСЃРµР»
 	/// </summary>
-	/// <param name="start">Начальное число диапазона</param>
-	/// <param name="end">Конечное число диапазона</param>
-	/// <param name="message">Текст запроса</param>
-	/// <param name="warning">Текст предупреждения если число не соответствует условиям</param>
+	/// <param name="start">РЊР°С‡Р°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РґРёР°РїР°Р·РѕРЅР°</param>
+	/// <param name="end">В РѕРЅРµС‡РЅРѕРµ С‡РёСЃР»Рѕ РґРёР°РїР°Р·РѕРЅР°</param>
+	/// <param name="message">вЂњРµРєСЃС‚ Р·Р°РїСЂРѕСЃР°</param>
+	/// <param name="warning">вЂњРµРєСЃС‚ РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёВ¤ РµСЃР»Рё С‡РёСЃР»Рѕ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СѓСЃР»РѕРІРёВ¤Рј</param>
 	/// <returns>unsigned</returns>
 	static unsigned GetUnsignedNonZeroNum(unsigned num, unsigned start, unsigned end, std::string warning);
 
 	/// <summary>
-	/// Выводит сообщение на экран
+	/// В¬С‹РІРѕРґРёС‚ СЃРѕРѕР±С‰РµРЅРёРµ РЅР° СЌРєСЂР°РЅ
 	/// </summary>
 	/// <param name="msgtext">string</param>
 	static void SendMessage(std::string msgtext);
 
 	/// <summary>
-	/// Выводит сообщение на экран если переменная ShowDebug = true
-	/// применяется для тестирования конструкторов и деструкторов.
+	/// В¬С‹РІРѕРґРёС‚ СЃРѕРѕР±С‰РµРЅРёРµ РЅР° СЌРєСЂР°РЅ РµСЃР»Рё РїРµСЂРµРјРµРЅРЅР°В¤ ShowDebug = true
+	/// РїСЂРёРјРµРЅВ¤РµС‚СЃВ¤ РґР»В¤ С‚РµСЃС‚РёСЂРѕРІР°РЅРёВ¤ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ Рё РґРµСЃС‚СЂСѓРєС‚РѕСЂРѕРІ.
 	/// </summary>
 	/// <param name="message">string</param>
 	static void SendDebugMsg(std::string message);
